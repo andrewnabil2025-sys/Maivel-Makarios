@@ -746,7 +746,7 @@ function stopFilm(){ if(filmTimer) clearInterval(filmTimer); filmTimer=null; if(
   3) Paste your Supabase Project URL and anon/public key below.
   Do NOT paste a service_role key into this public website.
 */
-var SUPABASE_URL = 'https://ughwypazhxulixkxrfov.supabase.co/rest/v1/';
+var SUPABASE_URL = 'https://ughwypazhxulixkxrfov.supabase.co';
 var SUPABASE_ANON_KEY = 'sb_publishable_sl_4h093mxtzfcJp0CB6qA_kts4t3MU';
 var WEDDING_TIME = new Date('2026-11-07T16:00:00+02:00').getTime();
 var store = [];
@@ -775,27 +775,47 @@ function esc(s) {
   });
 }
 function weddingHasPassed() { return Date.now() >= WEDDING_TIME; }
+
+
+
+
+
+
 function renderWall() {
   if (!wall || !cnt) return;
-  if (!weddingHasPassed()) {
-    cnt.textContent = store.length + (store.length === 1 ? ' WISH SEALED' : ' WISHES SEALED');
-    wall.innerHTML = '';
-    var sealed = document.createElement('div');
-    sealed.className = 'sealed-card';
-    sealed.innerHTML = '<b>Guest wishes are sealed</b><span>Names and personal wishes will be revealed together after the wedding.</span>';
-    wall.appendChild(sealed);
+  
+  cnt.textContent = store.length + (store.length === 1 ? ' WISH SEALED' : ' WISHES SEALED');
+  wall.innerHTML = '';
+
+  if (store.length === 0) {
+    var emptyCard = document.createElement('div');
+    emptyCard.className = 'sealed-card';
+    emptyCard.innerHTML = '<b>Be the first!</b><span>Leave a wish for Makarios and Maival.</span>';
+    wall.appendChild(emptyCard);
     return;
   }
-  cnt.textContent = store.length + (store.length === 1 ? ' WISH' : ' WISHES');
-  wall.innerHTML = '';
+
+  // عرض كروت الضيوف (سواء قبل الزفاف أو بعده)
   for (var i = store.length - 1; i >= 0; i--) {
     var o = store[i];
     var d = document.createElement('div');
     d.className = 'sealed-card';
-    d.innerHTML = '<b>' + esc(o.n || 'A guest') + ' — ' + esc(o.d || '') + '</b><span>' + esc(o.m || o.message || '') + '</span>';
+    
+    if (!weddingHasPassed()) {
+      // قبل الزفاف: يظهر اسم الضيف فقط وتحته نص مشوق للرسالة المغلقة
+      d.innerHTML = '<b>' + esc(o.n || 'A guest') + '</b><span style="opacity:0.75; font-style:italic; margin-top:4px; display:block;">✉️ Wish Sealed</span>';
+    } else {
+      // بعد موعد الزفاف: يظهر اسم الضيف وتحته رسالته الكرتية
+      d.innerHTML = '<b>' + esc(o.n || 'A guest') + ' — ' + esc(o.d || '') + '</b><span>' + esc(o.m || o.message || '') + '</span>';
+    }
+    
     wall.appendChild(d);
   }
 }
+
+
+
+
 function loadSharedWishes() {
   if (!supabaseConfigured()) {
     renderWall();
