@@ -351,7 +351,7 @@ body.vid #gate{display:none}
   <section class="scene" data-name="Couple">
     <div class="halo"></div>
     <div class="kicker">Chapter One &mdash; The Promise</div>
-    <div class="arch"><img src="images/couple-2.jpg" alt=" Maival and Makarios"></div>
+    <div class="arch"><img src="images/couple-2.jpg" alt="Makarios and Maival"></div>
     <h1 class="gold-script title-xl" style="margin-top:10px">Makarios<br>&amp; Maival</h1>
     <div class="orn"><span class="icon-disc" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="#4a0e1a" stroke-width="1.6"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="10" r="5"/><path d="M9 9l-2-4 4 1M15 5l2-2"/></svg>
@@ -374,7 +374,8 @@ body.vid #gate{display:none}
     <div class="ticket">
       <h3>GOLDEN TICKET</h3>
       <div class="names">MAKARIOS &mdash; MAIVAL</div>
-      <div class="meta">Saturday &middot; 07 Nov 2026 &middot; 6 PM<br>Holy Ceremony followed by Reception</div>
+      <div style="font-family:var(--caps);font-size:12px;letter-spacing:.12em;color:var(--gold-ink);margin:8px 0 4px">ARCHANGEL MICHAEL CHURCH<br>SHERATON</div>
+      <div class="meta">Saturday &middot; 07 Nov 2026 &middot; 4 PM<br>Holy Ceremony followed by Reception</div>
       <div class="cut"></div>
       <div style="font-family:var(--caps);font-size:10px;letter-spacing:.24em">DRESS CODE &mdash; EVENING ELEGANT</div>
       <div style="margin-top:12px"><a class="btn-map" href="https://maps.app.goo.gl/ULkScW6DkA9rPMMd8?g_st=ic" target="_blank" rel="noopener">OPEN CHURCH MAP</a></div>
@@ -388,7 +389,7 @@ body.vid #gate{display:none}
     <p class="body" style="font-size:15px">Leave a message. It stays sealed tonight and opens for them after the wedding.</p>
     <div class="form">
       <input id="guestName" maxlength="40" placeholder="Your name" autocomplete="name">
-      <textarea id="guestMsg" rows="3" maxlength="500" placeholder="Your wish for Maival ana Makarios"></textarea>
+      <textarea id="guestMsg" rows="3" maxlength="500" placeholder="Your wish for Makarios and Maival"></textarea>
     </div>
     <button class="wax-btn" id="sealBtn" type="button">SEAL<br>WITH<br>LOVE</button>
     <div class="kicker" id="sealCount" style="margin-top:10px;margin-bottom:0">0 WISHES SEALED</div>
@@ -398,7 +399,7 @@ body.vid #gate{display:none}
   <section class="scene" data-name="Finale">
     <div class="halo"></div>
     <div class="kicker">Chapter Five &mdash; And the Beginning</div>
-    <div class="arch"><img src="images/couple-3.jpg" alt="Maival and Makarios"></div>
+    <div class="arch"><img src="images/couple-3.jpg" alt="Makarios and Maival"></div>
     <h2 class="gold-script title-lg" style="margin-top:10px">See You<br>at the Altar</h2>
     <p class="body">No gift equals your presence.<br>Come &mdash; witness gold become forever.</p>
     <div style="font-family:var(--caps);letter-spacing:.3em;font-size:11px;color:var(--gold-ink);margin-top:10px">M &middot; M &middot; 07.11.2026</div>
@@ -408,7 +409,7 @@ body.vid #gate{display:none}
     <div class="halo halo-alt"></div>
     <div class="kicker">Final Chapter &mdash; The Royal Date</div>
     <h2 class="gold-script title-lg">Save the Date</h2>
-    <div style="font-family:var(--caps);letter-spacing:.32em;font-size:12px;color:#5a1a22;margin-top:8px">07 . 11 . 2026 &mdash; SATURDAY &mdash; 6 PM</div>
+    <div style="font-family:var(--caps);letter-spacing:.32em;font-size:12px;color:#5a1a22;margin-top:8px">07 . 11 . 2026 &mdash; SATURDAY &mdash; 4 PM</div>
     <div class="count" role="timer" aria-label="Countdown">
       <div class="count-cell"><b id="cdD">00</b><span>DAYS</span></div>
       <div class="count-cell"><b id="cdH">00</b><span>HOURS</span></div>
@@ -628,7 +629,7 @@ document.addEventListener('touchend', function(e){
 }, {passive:true});
 
 /* ---------- Countdown ---------- */
-var target = new Date('2026-11-07T18:00:00+02:00').getTime();
+var target = new Date('2026-11-07T16:00:00+02:00').getTime();
 function pad(n){ return (n<10?'0':'')+n; }
 function tick(){
   var d = target - Date.now(); if(d < 0) d = 0;
@@ -695,12 +696,12 @@ function fireLoop(){
 
 /* ---------- Film ---------- */
 var frames = [
-{src:'images/bride-1.jpg', cap:'In the beginning, a girl held roses, dreaming of her future.', tag:'MEMORY 1 / 5 — ONCE UPON A TIME', old:true},
-  {src:'images/couple-4.jpg', cap:'Then fate brought us together — two strangers sharing one smile.', tag:'MEMORY 2 / 5 — THE FIRST MEETING', old:false},
-  {src:'images/couple-2.jpg', cap:'Under the golden light, our love story truly began.', tag:'MEMORY 3 / 5 — BECOMING US', old:false},
-  {src:'images/couple-1.jpg', cap:'Looking together into a bright and beautiful future.', tag:'MEMORY 4 / 5 — THE PROMISE', old:false},
-  {src:'images/couple-3.jpg', cap:'Now, hand in hand. Our forever starts on 07.11.2026.', tag:'MEMORY 5 / 5 — ENGAGED IN GOLD', old:false}
- ];
+  {src:'images/bride-1.jpg', cap:'In the beginning, a girl held roses, dreaming of a forever she could not yet see.', tag:'MEMORY 1 / 5 — ONCE UPON A TIME', old:true},
+  {src:'images/couple-4.jpg', cap:'Then fate arranged the second scene — two strangers, one chair, one laughter.', tag:'MEMORY 2 / 5 — THE FIRST SCENE', old:false},
+  {src:'images/couple-2.jpg', cap:'By old bricks and golden light, love quietly rehearsed its vows.', tag:'MEMORY 3 / 5 — BECOMING US', old:false},
+  {src:'images/couple-1.jpg', cap:'In the mirror they finally saw it — the future, dressed in light.', tag:'MEMORY 4 / 5 — THE PROMISE', old:false},
+  {src:'images/couple-3.jpg', cap:'Now, crowned in joy. The premiere of forever — 07.11.2026.', tag:'MEMORY 5 / 5 — ENGAGED IN GOLD', old:false}
+];
 for(var f=0;f<frames.length;f++){ var im=new Image(); im.src=frames[f].src; }
 var filmA=document.getElementById('filmA'), filmB=document.getElementById('filmB');
 var capEl=document.getElementById('filmCaption'), tagEl=document.getElementById('filmTag');
@@ -738,51 +739,139 @@ function startFilm(){ stopFilm(); mi=0; renderFrame(0);
 function stopFilm(){ if(filmTimer) clearInterval(filmTimer); filmTimer=null; if(typeTimer) clearInterval(typeTimer); clearWords(); }
 
 /* ---------- Letters ---------- */
+/*
+  SHARED GUEST WISHES:
+  1) Create a Supabase project.
+  2) Run the SQL in supabase-wishes-setup.sql.
+  3) Paste your Supabase Project URL and anon/public key below.
+  Do NOT paste a service_role key into this public website.
+*/
+var SUPABASE_URL = 'https://ughwypazhxulixkxrfov.supabase.co/rest/v1/';
+var SUPABASE_ANON_KEY = 'sb_publishable_sl_4h093mxtzfcJp0CB6qA_kts4t3MU';
+var WEDDING_TIME = new Date('2026-11-07T16:00:00+02:00').getTime();
 var store = [];
-try{ store = JSON.parse(localStorage.getItem('mm_wishes_v3') || '[]'); if(!Array.isArray(store)) store=[]; }catch(e){ store=[]; }
-/* To receive guests' wishes: create a free form endpoint (e.g. Formspree, Web3Forms) and paste its address here.
-   Leave empty and wishes stay only on the guest's own device. Failed sends are kept and retried automatically. */
-var WISHES_ENDPOINT = '';
-function sendWish(w){
-  if(!WISHES_ENDPOINT) return Promise.resolve(false);
-  return fetch(WISHES_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body: JSON.stringify({name:w.n, message:w.m, date:w.d, sealed_until:'2026-11-07'}), keepalive:true})
-    .then(function(r){ return r.ok; }).catch(function(){ return false; });
+var wall = document.getElementById('wall');
+var cnt = document.getElementById('sealCount');
+var sharedWishesReady = false;
+
+try {
+  store = JSON.parse(localStorage.getItem('mm_wishes_v3') || '[]');
+  if (!Array.isArray(store)) store = [];
+} catch(e) { store = []; }
+
+function supabaseConfigured() {
+  return SUPABASE_URL.indexOf('https://') === 0 &&
+    SUPABASE_URL.indexOf('PASTE_') === -1 &&
+    SUPABASE_ANON_KEY && SUPABASE_ANON_KEY.indexOf('PASTE_') === -1;
 }
-function saveStore(){ try{ localStorage.setItem('mm_wishes_v3', JSON.stringify(store)); }catch(e){} }
-var flushing = false;
-function flushWishes(){
-  if(!WISHES_ENDPOINT || flushing) return; flushing = true;
-  var pend = store.filter(function(w){ return w.sent === false; });
-  pend.reduce(function(chain, w){
-    return chain.then(function(){ return sendWish(w).then(function(ok){ if(ok){ w.sent = true; saveStore(); } }); });
-  }, Promise.resolve()).then(function(){ flushing = false; }, function(){ flushing = false; });
+function supabaseHeaders(extra) {
+  var h = { 'apikey': SUPABASE_ANON_KEY, 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY };
+  if (extra) Object.keys(extra).forEach(function(k){ h[k] = extra[k]; });
+  return h;
 }
-window.addEventListener('online', flushWishes);
-var wall=document.getElementById('wall'), cnt=document.getElementById('sealCount');
-function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
-function renderWall(){
-  cnt.textContent = store.length + (store.length===1 ? ' WISH SEALED' : ' WISHES SEALED');
-  wall.innerHTML='';
-  for(var i=store.length-1;i>=0;i--){ var o=store[i];
-    var d=document.createElement('div'); d.className='sealed-card';
-    d.innerHTML='<b>'+esc(o.n)+' — '+esc(o.d)+'</b><span>Sealed until 07.11.2026</span>';
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function(c) {
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function weddingHasPassed() { return Date.now() >= WEDDING_TIME; }
+function renderWall() {
+  if (!wall || !cnt) return;
+  if (!weddingHasPassed()) {
+    cnt.textContent = store.length + (store.length === 1 ? ' WISH SEALED' : ' WISHES SEALED');
+    wall.innerHTML = '';
+    var sealed = document.createElement('div');
+    sealed.className = 'sealed-card';
+    sealed.innerHTML = '<b>Guest wishes are sealed</b><span>Names and personal wishes will be revealed together after the wedding.</span>';
+    wall.appendChild(sealed);
+    return;
+  }
+  cnt.textContent = store.length + (store.length === 1 ? ' WISH' : ' WISHES');
+  wall.innerHTML = '';
+  for (var i = store.length - 1; i >= 0; i--) {
+    var o = store[i];
+    var d = document.createElement('div');
+    d.className = 'sealed-card';
+    d.innerHTML = '<b>' + esc(o.n || 'A guest') + ' — ' + esc(o.d || '') + '</b><span>' + esc(o.m || o.message || '') + '</span>';
     wall.appendChild(d);
   }
 }
-renderWall(); flushWishes();
-document.getElementById('sealBtn').addEventListener('click', function(){
-  var n=document.getElementById('guestName').value.trim();
-  var m=document.getElementById('guestMsg').value.trim();
-  if(!n || !m){ alert('Please write your name and your wish first.'); return; }
-  store.push({n:n, m:m, d:new Date().toLocaleDateString(), sent:false});
-  saveStore(); flushWishes();
-  document.getElementById('guestName').value=''; document.getElementById('guestMsg').value='';
-  renderWall(); burst(1);
-  try{ chime([659.25, 783.99, 1046.5]); }catch(e){}
-  alert('Sealed with love.  Maival and Makarios will open it after the wedding.');
-});
+function loadSharedWishes() {
+  if (!supabaseConfigured()) {
+    renderWall();
+    return Promise.resolve(false);
+  }
+  var url = SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/guest_wishes?select=name,message,created_at&order=created_at.asc';
+  return fetch(url, { headers: supabaseHeaders({ 'Accept': 'application/json' }) })
+    .then(function(r) {
+      if (!r.ok) throw new Error('Could not load shared wishes');
+      return r.json();
+    })
+    .then(function(rows) {
+      sharedWishesReady = true;
+      if (weddingHasPassed()) {
+        store = rows.map(function(row) {
+          return { n: row.name, m: row.message, d: row.created_at ? new Date(row.created_at).toLocaleDateString() : '' };
+        });
+      } else {
+        store = rows.map(function(row) {
+          return { n: row.name, m: '', d: row.created_at ? new Date(row.created_at).toLocaleDateString() : '' };
+        });
+      }
+      renderWall();
+      return true;
+    })
+    .catch(function(err) {
+      console.error(err);
+      renderWall();
+      return false;
+    });
+}
+function saveStore() {
+  try { localStorage.setItem('mm_wishes_v3', JSON.stringify(store)); } catch(e) {}
+}
+function submitSharedWish(w) {
+  if (!supabaseConfigured()) {
+    return Promise.reject(new Error('The shared message book is not connected yet. Please finish the Supabase setup.'));
+  }
+  var url = SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/guest_wishes';
+  return fetch(url, {
+    method: 'POST',
+    headers: supabaseHeaders({ 'Content-Type': 'application/json', 'Prefer': 'return=minimal' }),
+    body: JSON.stringify({ name: w.n, message: w.m })
+  }).then(function(r) {
+    if (!r.ok) return r.text().then(function(t){ throw new Error(t || 'Could not save wish'); });
+    return true;
+  });
+}
+renderWall();
+loadSharedWishes();
 
+document.getElementById('sealBtn').addEventListener('click', function() {
+  var n = document.getElementById('guestName').value.trim();
+  var m = document.getElementById('guestMsg').value.trim();
+  if (!n || !m) { alert('Please write your name and your wish first.'); return; }
+
+  var btn = document.getElementById('sealBtn');
+  if (!supabaseConfigured()) {
+    alert('The shared message book is not connected yet. The site owner needs to finish the Supabase setup before guests send wishes.');
+    return;
+  }
+  btn.disabled = true;
+  submitSharedWish({ n: n, m: m }).then(function() {
+    document.getElementById('guestName').value = '';
+    document.getElementById('guestMsg').value = '';
+    alert('Your wish has been sealed with love. Thank you!');
+    return loadSharedWishes();
+  }).catch(function(err) {
+    console.error(err);
+    alert('Sorry, the message could not be saved. Please check your connection and try again.');
+  }).then(function() {
+    btn.disabled = false;
+    try { chime([659.25, 783.99, 1046.5]); } catch(e) {}
+    burst(1);
+  });
+});
 /* ---------- Sound (gentle bells, user-gesture only) ---------- */
 var AC=null, playing=false, seqTimer=null;
 function chime(notes){
