@@ -779,8 +779,6 @@ function weddingHasPassed() { return Date.now() >= WEDDING_TIME; }
 
 
 
-
-
 function renderWall() {
   if (!wall || !cnt) return;
   
@@ -795,23 +793,20 @@ function renderWall() {
     return;
   }
 
-  // عرض كروت الضيوف (سواء قبل الزفاف أو بعده)
+  // عرض كروت الضيوف على الحائط
   for (var i = store.length - 1; i >= 0; i--) {
     var o = store[i];
     var d = document.createElement('div');
     d.className = 'sealed-card';
     
-    if (!weddingHasPassed()) {
-      // قبل الزفاف: يظهر اسم الضيف فقط وتحته نص مشوق للرسالة المغلقة
-      d.innerHTML = '<b>' + esc(o.n || 'A guest') + '</b><span style="opacity:0.75; font-style:italic; margin-top:4px; display:block;">✉️ Wish Sealed</span>';
-    } else {
-      // بعد موعد الزفاف: يظهر اسم الضيف وتحته رسالته الكرتية
-      d.innerHTML = '<b>' + esc(o.n || 'A guest') + ' — ' + esc(o.d || '') + '</b><span>' + esc(o.m || o.message || '') + '</span>';
-    }
+    // يظهر اسم الضيف بوضوح وتحته علامة أن الرسالة مختومة ومغلقة حتى يوم الزفاف
+    var guestName = esc(o.n || 'A guest');
+    d.innerHTML = '<b>' + guestName + '</b><span style="display:block; margin-top:4px; font-style:italic; opacity:0.8;">✉️ Wish Sealed (Locked)</span>';
     
     wall.appendChild(d);
   }
 }
+
 
 
 
