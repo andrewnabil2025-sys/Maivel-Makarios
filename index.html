@@ -816,7 +816,11 @@ function loadSharedWishes() {
     renderWall();
     return Promise.resolve(false);
   }
-  var url = SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/guest_wishes?select=name,message,created_at&order=created_at.asc';
+
+var url = SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/guest_wishes?select=name,created_at&order=created_at.asc';
+
+
+
   return fetch(url, { headers: supabaseHeaders({ 'Accept': 'application/json' }) })
     .then(function(r) {
       if (!r.ok) throw new Error('Could not load shared wishes');
